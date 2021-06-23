@@ -31,3 +31,26 @@
     border: 1px solid lime;
     border-radius: 20px;
 }
+
+.lista-todo{
+    margin: 0 20%;
+    border-radius: 25px;
+    background-color: lightgray;
+    padding: 15px;
+}
+
+.todo{
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+}
+
+.todo i{
+    float: right;
+}
+
+.todo:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
