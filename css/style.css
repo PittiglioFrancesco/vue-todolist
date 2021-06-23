@@ -26,6 +26,10 @@
     margin-right: 10px;
 }
 
+.inputs button{
+    cursor: pointer;
+}
+
 .inputs button, .inputs input{
     padding: 0 10px;
     border: 1px solid lime;
@@ -35,18 +39,30 @@
 .lista-todo{
     margin: 0 20%;
     border-radius: 25px;
-    background-color: lightgray;
+    background-color: lime;
     padding: 15px;
+    border: 1px solid black;
 }
 
 .todo{
+    border-radius: 20px;
     margin-bottom: 10px;
-    border-bottom: 1px solid gray;
+    border: 1px solid black;
     padding: 5px;
+    box-shadow: 1px 1px black;
+}
+
+.todo:hover{
+    background-color: whitesmoke;
 }
 
 .todo i{
     float: right;
+}
+
+.todo i:hover{
+    cursor: pointer;
+    color: red;
 }
 
 .todo:after {
