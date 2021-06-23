@@ -20,23 +20,29 @@
     <div id="app">
 
         <div class="inputs">
-            <input type="text" placeholder="Nuovo Todo">
-            <button type="button">Aggiungi</button>
+            <input type="text" @keyup.enter="addTodo" placeholder="Nuovo Todo" v-model="newTodo">
+            <button @click="addTodo">Aggiungi</button>
         </div>
 
         <div class="lista-todo">
 
-            <div class="todo">
-                <span>Fare i compiti</span>
-                <i class="fas fa-trash"></i>
+            <div v-if="todos.length > 0">
+
+                <div class="todo" v-for="(item, index) in todos">
+                    <span>
+                        {{ item }}
+                        <i class="fas fa-trash" @click="removeTodo(index)"></i>
+                    </span>
+                    
+                </div>
+
             </div>
 
-            <div class="todo">
-                <span>Fare i compiti</span>
-                <i class="fas fa-trash"></i>
-            </div>
+            <h2 v-else>Non ci sono cose da fare</h2>
 
         </div>
+
+        
     </div>
 
     <script src="js/script.js"></script>
